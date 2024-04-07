@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import './App.css'
 
 
@@ -7,7 +7,7 @@ function App() {
   const [textColor, setTextColor] = useState("#1b1b1b");
   const [buttonStyle, setButtonStyle] = useState("white");
 
-  function handleClick() {
+  function handleChange() {
     setBackgroundColor(backgroundColor === "white" ? "#1b1b1b" : "white");
     setTextColor(textColor === "#1b1b1b" ? "#ffa31a" : "#1b1b1b");
     setButtonStyle(backgroundColor === "white" ? "#1b1b1b" : "white");
@@ -16,7 +16,7 @@ function App() {
   return (
     <section style={{ backgroundColor, color: textColor }}>
       <button
-        onClick={handleClick}
+        onClick={handleChange}
         style={{
           buttonStyle,
           color: textColor,
